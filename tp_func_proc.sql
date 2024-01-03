@@ -133,3 +133,15 @@ BEGIN
     END IF
 END//
 
+-- Q6:
+DELIMITER //
+CREATE FUNCTION nomservice(serviceId INT) RETURNS VARCHAR(50)
+BEGIN
+    DECLARE serviceName VARCHAR(50);
+    SELECT nomser INTO serviceName FROM Service WHERE nuser = serviceId;
+    RETURN serviceName;
+END //
+DELIMITER ;
+
+SELECT nomservice(3)
+
