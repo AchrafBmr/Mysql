@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 -- Active: 1698057065951@@127.0.0.1@3306
+=======
+>>>>>>> 23a232df680670b0c6409a00c2866ff3466fabba
 CREATE DATABASE Revision;
 USE Revision;
 CREATE TABLE Etudiant(
@@ -582,6 +585,7 @@ BEGIN
     RETURN x*2;
 END //
 SELECT f9(12);
+<<<<<<< HEAD
 
 
 
@@ -604,3 +608,5 @@ CREATE DATABASE Corr_TP;
 
 
 
+=======
+>>>>>>> 23a232df680670b0c6409a00c2866ff3466fabba

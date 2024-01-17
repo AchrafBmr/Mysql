@@ -135,7 +135,10 @@ BEGIN
     END IF
 END//
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 23a232df680670b0c6409a00c2866ff3466fabba
 -- Q6:
 DELIMITER //
 CREATE FUNCTION nomservice(serviceId INT) RETURNS VARCHAR(50)
