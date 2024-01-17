@@ -96,15 +96,17 @@ SELECT nbProj(2)
 -- methode 2 de Q3 :
 
 DELIMITER //
-CREATE FUNCTION nbResp(serv VARCHAR) RETURNS INT
-DECLARE NB INT;
+CREATE FUNCTION nbResp(serv VARCHAR(50)) RETURNS INT
+
 BEGIN
+    DECLARE NB VARCHAR(50);
     SELECT COUNT(*) INTO NB FROM Projet WHERE resp IN (
         SELECT e.nuempl FROM Employe e INNER JOIN Service s ON e.affect = s.nuser WHERE s.nomser = serv
     );
     RETURN NB;
 END //
 DELIMITER ;
+
 
 
 -- Q4 :
@@ -132,4 +134,17 @@ BEGIN
         return 'Bon salaire';
     END IF
 END//
+
+
+-- Q6:
+DELIMITER //
+CREATE FUNCTION nomservice(serviceId INT) RETURNS VARCHAR(50)
+BEGIN
+    DECLARE serviceName VARCHAR(50);
+    SELECT nomser INTO serviceName FROM Service WHERE nuser = serviceId;
+    RETURN serviceName;
+END //
+DELIMITER ;
+
+SELECT nomservice(3)
 
