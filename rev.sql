@@ -113,30 +113,3 @@ ont la moyenne en utilisant le curseur*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-drop procedure Liste_clients
-
-
-
-
-Declare Nom_curseur cursor for instruction select
-open Nom_curseur;
-fetch Nom_curseur into liste_variables;
-close Nom_curseur;
-
-
-
-
-
-
-
